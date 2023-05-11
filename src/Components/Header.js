@@ -16,7 +16,7 @@ export default function Header(props) {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, senha)
       .then(() => {
-        updateProfile(auth.currentUser.user, {
+        updateProfile(auth.user, {
           displayName : username
         });
       })
